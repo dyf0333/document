@@ -1,10 +1,11 @@
-# document
-学习笔记文档
+# document 笔记、rpc、thrift
 
 转载或原创一些技术文档
 
-<br>
+### （转载）Laravel的核心概念
+    
+    该文作者对于laravel的核心概念进行的阐述
 
-（转载）Laravel的核心概念.md
-<br>
-    该文作者对于laravel的核心概念进行的阐述
+### java、php thrift
+
+    java < -- >php 
