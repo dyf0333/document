@@ -6,6 +6,13 @@
     
     该文作者对于laravel的核心概念进行的阐述
 
+### Laravel 的验证码
+    
+    TP有 topthink/think-captcha
+    Laravel有 gregwar/captcha
+
 ### java、php thrift
 
     java < -- >php 
+    
+    
