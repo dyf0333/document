@@ -15,4 +15,11 @@
 
     java < -- >php 
     
+### Laravel 使用过程中的一些坑（持续更新。。。）
+    
+    mail功能
+    session
+    DB的Eloquent操作
+    
+    
     
