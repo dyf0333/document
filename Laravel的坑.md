@@ -111,3 +111,41 @@ public function __construct()
     
 坑的是，报的错与$fillable无关
 
+## 5.blade页面里，处理数据，字段里有id的会强制为int
+
+   数据库以 id、name存储的数据，所以直接获取成  $list 并当做参数传给blade页面，
+   
+   然后在blade页面写一个select，例：
+```  
+<select class="select">
+    <option value="">请选择</option>
+    @foreach ($list as $v)
+        <option value="{{ $v['id']}}">{{$v['name']}}</option>
+    @endforeach
+</select>
+```
+
+### 问题：
+    
+数据库存储的id是 01，02...这样的数据，或者可以理解成存储的是char
+
+但是select的id出来的就变成了 1，2... 
+
+如果是纯字符串就变成了0
+
+### 解决办法：
+
+获取数据时候把 id as 其他非id名字；例如
+
+     select id as code from  tablename    where id =1 ;
+
+在blade获取的时候，用新的名字，就不会只获取其中的数字了
+
+```
+<select class="select">
+    <option value="">请选择</option>
+    @foreach ($list as $v)
+        <option value="{{ $v['code']}}">{{$v['name']}}</option>
+    @endforeach
+</select>
+```
