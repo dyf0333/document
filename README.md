@@ -21,5 +21,8 @@
     session
     DB的Eloquent操作
     
+### Laravel强制下载的方法
     
+    php有原生的，利用header来强制下载的；
+    laravel提供了使用起来更方便的方法
     
